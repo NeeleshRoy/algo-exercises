@@ -8,6 +8,10 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
+	return solution1(str);
+}
+
+function solution1(str) {
 	const t = str.split('');
 	t[0] = t[0].toUpperCase();
 	for (let i = 0; i < t.length; i++) {
