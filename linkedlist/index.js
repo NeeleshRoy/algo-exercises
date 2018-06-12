@@ -54,9 +54,14 @@ class LinkedList {
 		if (!this.head) return null;
 		let node = this.head;
 		while (node.next) {
+			if (!node.next.next) {
+				node.next = null;
+				return;
+			}
 			node = node.next;
 		}
-		return;
+
+		this.head = null;
 	}
 }
 
